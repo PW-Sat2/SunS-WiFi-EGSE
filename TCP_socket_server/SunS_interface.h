@@ -217,59 +217,7 @@ class SunS_Access {
 
     void printRegistersLineTCP() {
         SunS_Access_Types::registerDesc registermap = this->registersRead();
-
-        TCPPrintf("%u;", registermap.registerMap.STATUS);
-        TCPPrintf("%u;", registermap.registerMap.WHO_AM_I);
-        TCPPrintf("%u;", registermap.registerMap.AZIMUTH_ANGLE);
-        TCPPrintf("%u;", registermap.registerMap.ELEVATION_ANGLE);
-        TCPPrintf("%d;", registermap.registerMap.TEMPERATURE_A);
-        TCPPrintf("%d;", registermap.registerMap.TEMPERATURE_B);
-        TCPPrintf("%d;", registermap.registerMap.TEMPERATURE_C);
-        TCPPrintf("%d;", registermap.registerMap.TEMPERATURE_D);
-        TCPPrintf("%d;", registermap.registerMap.TEMPERATURE_STRUCT);
-        TCPPrintf("%u;", registermap.registerMap.ALS_1A_VL_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_1B_VL_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_1C_VL_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_1D_VL_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_2A_VL_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_2B_VL_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_2C_VL_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_2D_VL_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_3A_VL_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_3B_VL_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_3C_VL_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_3D_VL_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_1A_IR_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_1B_IR_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_1C_IR_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_1D_IR_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_2A_IR_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_2B_IR_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_2C_IR_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_2D_IR_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_3A_IR_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_3B_IR_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_3C_IR_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_3D_IR_RAW);
-        TCPPrintf("%u;", registermap.registerMap.TEMPERATURE_A_RAW);
-        TCPPrintf("%u;", registermap.registerMap.TEMPERATURE_B_RAW);
-        TCPPrintf("%u;", registermap.registerMap.TEMPERATURE_C_RAW);
-        TCPPrintf("%u;", registermap.registerMap.TEMPERATURE_D_RAW);
-        TCPPrintf("%u;", registermap.registerMap.TEMPERATURE_STRUCT_RAW);
-        TCPPrintf("%u;", registermap.registerMap.ALS_STATUS);
-        TCPPrintf("%u;", registermap.registerMap.ALS_1A_ID);
-        TCPPrintf("%u;", registermap.registerMap.ALS_1B_ID);
-        TCPPrintf("%u;", registermap.registerMap.ALS_1C_ID);
-        TCPPrintf("%u;", registermap.registerMap.ALS_1D_ID);
-        TCPPrintf("%u;", registermap.registerMap.ALS_2A_ID);
-        TCPPrintf("%u;", registermap.registerMap.ALS_2B_ID);
-        TCPPrintf("%u;", registermap.registerMap.ALS_2C_ID);
-        TCPPrintf("%u;", registermap.registerMap.ALS_2D_ID);
-        TCPPrintf("%u;", registermap.registerMap.ALS_3A_ID);
-        TCPPrintf("%u;", registermap.registerMap.ALS_3B_ID);
-        TCPPrintf("%u;", registermap.registerMap.ALS_3C_ID);
-        TCPPrintf("%u", registermap.registerMap.ALS_3D_ID);
-        TCPPrintf("\r\n");
+        TCPPrintf("%u;%u;%u;%u;%d;%d;%d;%d;%d;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;%u;\r\n", registermap.registerMap.STATUS, registermap.registerMap.WHO_AM_I, registermap.registerMap.AZIMUTH_ANGLE, registermap.registerMap.ELEVATION_ANGLE, registermap.registerMap.TEMPERATURE_A, registermap.registerMap.TEMPERATURE_B, registermap.registerMap.TEMPERATURE_C, registermap.registerMap.TEMPERATURE_D, registermap.registerMap.TEMPERATURE_STRUCT, registermap.registerMap.ALS_1A_VL_RAW, registermap.registerMap.ALS_1B_VL_RAW, registermap.registerMap.ALS_1C_VL_RAW, registermap.registerMap.ALS_1D_VL_RAW, registermap.registerMap.ALS_2A_VL_RAW, registermap.registerMap.ALS_2B_VL_RAW, registermap.registerMap.ALS_2C_VL_RAW, registermap.registerMap.ALS_2D_VL_RAW, registermap.registerMap.ALS_3A_VL_RAW, registermap.registerMap.ALS_3B_VL_RAW, registermap.registerMap.ALS_3C_VL_RAW, registermap.registerMap.ALS_3D_VL_RAW, registermap.registerMap.ALS_1A_IR_RAW, registermap.registerMap.ALS_1B_IR_RAW, registermap.registerMap.ALS_1C_IR_RAW, registermap.registerMap.ALS_1D_IR_RAW, registermap.registerMap.ALS_2A_IR_RAW, registermap.registerMap.ALS_2B_IR_RAW, registermap.registerMap.ALS_2C_IR_RAW, registermap.registerMap.ALS_2D_IR_RAW, registermap.registerMap.ALS_3A_IR_RAW, registermap.registerMap.ALS_3B_IR_RAW, registermap.registerMap.ALS_3C_IR_RAW, registermap.registerMap.ALS_3D_IR_RAW, registermap.registerMap.TEMPERATURE_A_RAW, registermap.registerMap.TEMPERATURE_B_RAW, registermap.registerMap.TEMPERATURE_C_RAW, registermap.registerMap.TEMPERATURE_D_RAW, registermap.registerMap.TEMPERATURE_STRUCT_RAW, registermap.registerMap.ALS_STATUS, registermap.registerMap.ALS_1A_ID, registermap.registerMap.ALS_1B_ID, registermap.registerMap.ALS_1C_ID, registermap.registerMap.ALS_1D_ID, registermap.registerMap.ALS_2A_ID, registermap.registerMap.ALS_2B_ID, registermap.registerMap.ALS_2C_ID, registermap.registerMap.ALS_2D_ID, registermap.registerMap.ALS_3A_ID, registermap.registerMap.ALS_3B_ID, registermap.registerMap.ALS_3C_ID, registermap.registerMap.ALS_3D_ID);
     }
 
  private:

@@ -12,12 +12,14 @@ bool should_be_connected = false;
 size_t buff_size = 255;
 
 SunS_Access SunS(0x1E);
+constexpr uint8_t IRQ = 5;
 
 
 void setup(){
   Wire.pins(2, 14);
   Wire.begin();
   Serial.begin(115200);
+  pinMode(IRQ, INPUT);
 
     //  wait some time
   delay(100);
@@ -91,7 +93,9 @@ void getDataFromClient() {
 
       SunS.triggerMeasurement(itime, gain);
 
-      waitForSunS(itime);
+      //waitForSunS(itime);
+      delay(50);
+      while(false == digitalRead(IRQ)) {};
 
       SunS.printRegistersLineTCP();
     }
