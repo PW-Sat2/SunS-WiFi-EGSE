@@ -11,7 +11,7 @@ WiFiClient serverClient;
 bool should_be_connected = false;
 size_t buff_size = 255;
 
-SunS_Access SunS(0x1E);
+SunS_Access SunS(0x44);
 constexpr uint8_t IRQ = 5;
 
 
@@ -55,11 +55,6 @@ void loop(){
   getDataFromUART();
 }
 
-void waitForSunS(uint8_t itime) {
-  uint8_t delay_time = 3*itime + 400;
-  delay(delay_time);
-}
-
 void getDataFromClient() {
   if (serverClient && serverClient.connected()) {
     uint8_t current_char = 0;
@@ -92,12 +87,15 @@ void getDataFromClient() {
       PRINTLND(gain);
 
       SunS.triggerMeasurement(itime, gain);
-
-      //waitForSunS(itime);
-      delay(50);
-      while(false == digitalRead(IRQ)) {};
-
+      delay(10);
+      PRINTLND("Measured 1");
+      while(true == digitalRead(IRQ)) {
+        PRINTD("+");
+      };
+      PRINTLND(" ");
+      PRINTLND("Measured 2");
       SunS.printRegistersLineTCP();
+      PRINTLND("Measured 3");
     }
   }
 }
