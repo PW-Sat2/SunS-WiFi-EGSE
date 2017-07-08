@@ -1,5 +1,5 @@
-# SunS-EM3-WiFi-EGSE
-ESP8266-based WiFi EGSE code for SunS-EM3
+# SunS-WiFi-EGSE
+ESP8266-based WiFi EGSE code for SunS
 
 ## Warning!
 Written in Arduino library for ESP8266 ver. 2.3.0. The library needs a fix in the file:
@@ -9,7 +9,7 @@ AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\2.3.0\libraries\Wire
 the define `#define BUFFER_LENGTH` must be `88` or greater (e.g. 255). Note that default value is `32`.
 
 ## Joining WiFi network
-The settings for WiFi connection are defined in `credentials.h` file. They can be changed according to actual demands:
+The settings for WiFi connection are defined in `credentials.h` file. They can be changed according to actual demands e.g.:
 ```
 const char* ssid = "SKA.PW";
 const char* password = "********";
