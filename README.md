@@ -14,8 +14,8 @@ the define `#define BUFFER_LENGTH` must be `88` or greater (e.g. 255). Note that
 ## Joining WiFi network
 The settings for WiFi connection are defined in `credentials.h` file. They can be changed according to actual demands e.g.:
 ```
-const char* ssid = "SKA.PW";
-const char* password = "********";
+const char* ssid = "SSID_NAME";
+const char* password = "PASSWORD";
 const uint8_t port = 23;
 ```
 
