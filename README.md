@@ -1,6 +1,9 @@
 # SunS-WiFi-EGSE
 ESP8266-based WiFi EGSE code for SunS
 
+![image](https://user-images.githubusercontent.com/6267528/46909781-317a0a80-cf38-11e8-8c50-630ace2ae58f.png)
+
+
 ## Warning!
 Written in Arduino library for ESP8266 ver. 2.3.0. The library needs a fix in the file:
 ```
